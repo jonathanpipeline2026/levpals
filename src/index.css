@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-primary: #7c3aed;
+  --color-primary-light: #a78bfa;
+  --color-accent-blue: #3b82f6;
+  --color-accent-purple: #9333ea;
+  --color-dark: #0f0f1a;
+  --color-dark-card: #1a1a2e;
+  --color-dark-surface: #252540;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gradient-hero {
+  background: linear-gradient(180deg, #c084fc 0%, #a78bfa 25%, #818cf8 50%, #60a5fa 75%, #93c5fd 100%);
+}
+
+.gradient-footer {
+  background: linear-gradient(180deg, #60a5fa 0%, #818cf8 30%, #c084fc 60%, #93c5fd 100%);
+}
+
+.gradient-cta {
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #000 0%, #1a1a1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-shadow {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
